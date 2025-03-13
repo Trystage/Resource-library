@@ -299,6 +299,21 @@
             "ios" : false,
             "linux" : false,
             "android" : false
+        },
+        {
+            "key": "trae",
+            "displayName": "Trae",
+            "detailTitle": "Trae",
+            "website": "https://www.trae.ai/",
+            "downloadLink": "https://www.trae.ai/download",
+            "readme": null,
+            "overrideWarning": "",
+            "iconLink" : null,
+            "category" : "coding",
+            "windows" : true,
+            "ios" : true,
+            "linux" : true,
+            "android" : false
         }
     ]
 }
