@@ -86,21 +86,22 @@ function openSubbar(type){
             (content.category == category.toLowerCase()) && 
             (content[type.toLowerCase()] == true)
         );
+        if (filteredContents.length >= 1){
+            // 创建分类标题链接（带URL参数）
+            div.innerHTML = `<a href="/category.html?category=${category}&amp;platform=${type}">
+                <h2>${category}:</h2></a>`
+            subbar.appendChild(div);
 
-        // 创建分类标题链接（带URL参数）
-        div.innerHTML = `<a href="/category.html?category=${category}&amp;platform=${type}">
-            <h2>${category}:</h2></a>`
-        subbar.appendChild(div);
-
-        // 生成具体内容项链接
-        filteredContents.forEach(content =>{
-            const contentdiv = document.createElement("div");
-            contentdiv.className = "subbar-content";
-            // 创建带资源key参数的详情页链接
-            contentdiv.innerHTML = `<a href="/detail.html?key=${content.key}">
-                ${content.displayName}</a>`
-            subbar.appendChild(contentdiv);
-        })
+            // 生成具体内容项链接
+            filteredContents.forEach(content =>{
+                const contentdiv = document.createElement("div");
+                contentdiv.className = "subbar-content";
+                // 创建带资源key参数的详情页链接
+                contentdiv.innerHTML = `<a href="/detail.html?key=${content.key}">
+                    ${content.displayName}</a>`
+                subbar.appendChild(contentdiv);
+            })
+        }
     });
     
     subbar.appendChild(emptydiv); // 添加底部留空
