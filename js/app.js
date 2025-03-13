@@ -17,8 +17,8 @@ function loadResources() {
         const div = document.createElement("div");
         div.id = "content";
         // 无ico或无官网检测
-        if ((!resource.iconLink.length) || (resource.iconLink.length <= 3)) { resource.iconLink = "image/nullicon.png" }
-        else if ((!resource.iconLink.startWith("http"))) {resource.iconLink = "icons/" + resource.key + ".png"}
+        if ((resource.iconLink == null) || (resource.iconLink.length <= 3)) { resource.iconLink = "image/nullicon.png" }
+        else if ((!resource.iconLink.startsWith("http"))) {resource.iconLink = "icons/" + resource.key + ".png"}
         if ((!resource.website) || (resource.website.length <= 3)) { resource.website = "/null.html" }
         if (resource.detailTitle.length >= 25) { resource.detailTitle = resource.detailTitle.slice(0, 24).split(' ', 10).join(" ") + "..." }
 
@@ -49,8 +49,8 @@ function loadCategoryResources() {
         const div = document.createElement("div");
         div.id = "content";
         // 无ico或无官网检测
-        if ((!resource.iconLink.length) || (resource.iconLink.length <= 3)) { resource.iconLink = "image/nullicon.png" }
-        else if ((!resource.iconLink.startWith("http"))) {resource.iconLink = "icons/" + resource.key + ".png"}
+        if ((resource.iconLink == null) || (resource.iconLink.length <= 3)) { resource.iconLink = "image/nullicon.png" }
+        else if ((!resource.iconLink.startsWith("http"))) {resource.iconLink = "icons/" + resource.key + ".png"}
         if ((!resource.website) || (resource.website.length <= 3)) { resource.website = "/null.html" }
         if (resource.detailTitle.length >= 25) { resource.detailTitle = resource.detailTitle.slice(0, 24).split(' ', 10).join(" ") + "..." }
 
@@ -80,8 +80,8 @@ function searchResources(categoryfilter) {
         const div = document.createElement("div");
         div.id = "content";
         // 无ico或无官网检测
-        if ((!resource.iconLink.length) || (resource.iconLink.length <= 3)) { resource.iconLink = "image/nullicon.png" }
-        else if ((!resource.iconLink.startWith("http"))) {resource.iconLink = "icons/" + resource.key + ".png"}
+        if ((resource.iconLink == null) || (resource.iconLink.length <= 3)) { resource.iconLink = "image/nullicon.png" }
+        else if ((!resource.iconLink.startsWith("http"))) {resource.iconLink = "icons/" + resource.key + ".png"}
         if ((!resource.website) || (resource.website.length <= 3)) { resource.website = "/null.html" }
         if (resource.detailTitle.length >= 25) { resource.detailTitle = resource.detailTitle.slice(0, 24).split(' ', 10).join(" ") + "..." }
 
