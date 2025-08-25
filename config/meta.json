@@ -503,6 +503,27 @@
             "反作弊" : false,
             "客户端" : false,
             "成品端" : false
+        },
+
+
+
+        {
+            "key": "paradise-config",
+            "displayName": "Paradise Config",
+            "detailTitle": "专为新手服主设计的反作弊配置",
+            "website": "https://paradise.x1a0hu1.shop/config.html",
+            "downloadLink": "http://files.tsmp.top/ParadiseConfig.zip",
+            "readme": null,
+            "overrideWarning": null,
+            "iconLink" : "https://paradise.x1a0hu1.shop/img/zako.jpg",
+            "category" : "公益反作弊",
+            "模组" : false,
+            "插件" : false,
+            "服务端" : false,
+            "工具" : false,
+            "反作弊" : true,
+            "客户端" : false,
+            "成品端" : false
         }
     ]
 }
