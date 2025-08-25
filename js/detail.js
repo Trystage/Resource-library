@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title: document.querySelector(".header > h1"),          // 主标题元素
         downloadBtn: document.querySelector(".header > .download-btn"), // 下载按钮
         info: document.querySelector(".info-box > span"),        // 信息展示区域
+        readme: document.querySelector(".readme"),             // readme提示框
         warning: document.querySelector(".warning")             // 警告提示框
     };
 
@@ -35,6 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 console.log(resource.info); // 调试输出资源信息
                 
+                // 显示readme信息
+                if (resource.readme) {
+                    elements.readme.innerText = resource.readme;
+                } else {
+                    elements.readme.style.display = "none";
+                }
+                
                 // 条件处理警告信息显示
                 if (resource.overrideWarning) {
                     // 当存在自定义警告时显示指定内容
@@ -44,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     elements.warning.style.borderRadius = "0px";
                     elements.warning.style.padding = "0px";
                 }
+                
+                // 条件处理警告信息显示
+                
             } else {
                 // 未找到对应资源的情况
                 console.log("Resource not found.");

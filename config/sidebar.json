@@ -1,6 +1,9 @@
 {
-    "Android":["Game","Coding","Video","AI","Remote","MC","Music","Tool","Proxy"],
-    "Windows":["Game","Coding","Video","AI","Remote","MC","Music","Tool","Proxy"],
-    "ios":["Game","Coding","Video","AI","Remote","MC","Music","Tool","Proxy"],
-    "Linux":["Game","Coding","Video","AI","Remote","MC","Music","Tool","Proxy"]
+    "模组": ["实用", "管理", "辅助", "玩法", "功能"],
+    "插件": ["小游戏", "轻量游戏", "管理", "内容", "常用"],
+    "服务端": ["插件", "Folia", "模组", "复合", "基岩"],
+    "工具": ["开发", "实用"],
+    "反作弊": ["公益反作弊", "轻量反作弊", "付费反作弊"],
+    "客户端": ["纯净客户端", "优化客户端", "整合客户端"],
+    "成品端": ["小游戏", "原版生存", "插件生存", "模组生存", "大厅", "群组服"]
 }

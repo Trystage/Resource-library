@@ -39,10 +39,10 @@ function loadCategoryResources() {
     platformName = new URLSearchParams(window.location.search).get("platform");
     let h2category = document.getElementById("category-name");
     h2category.innerHTML = categoryName;
-    filteredResources = resources.filter(resource => resource.category == categoryName.toLowerCase());
+    filteredResources = resources.filter(resource => resource.category == categoryName);
     if (platformName){
-        filteredResources = filteredResources.filter(resource => resource[platformName].toLowerCase() == true);
-        h2category.innerHTML = "在 " + platformName + " 上可用的 " + categoryName + ":";
+        filteredResources = filteredResources.filter(resource => resource[platformName] == true);
+        h2category.innerHTML = categoryName + " 的 " + platformName + ":";
     }
     resourcesList.innerHTML = "";
     filteredResources.forEach(resource => {
@@ -65,8 +65,8 @@ function loadCategoryResources() {
 
 // 搜索功能
 function searchResources(categoryfilter) {
-    const searchQuery = document.getElementById("search").value.toLowerCase();
-    const queryedResources = resources.filter(resource => resource.displayName.toLowerCase().includes(searchQuery));
+    const searchQuery = document.getElementById("search").value;
+    const queryedResources = resources.filter(resource => resource.displayName.includes(searchQuery));
     const resourcesList = document.getElementById("resources-list");
     var filteredResources, categoryName;
     if (categoryfilter == "category") {
