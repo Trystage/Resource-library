@@ -39,6 +39,31 @@ header a:hover {
     text-decoration: underline;
 }
 
+.header-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 0;
+    margin-right: 20px;
+    float: right;
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: #eee solid;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s;
+    height: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-link:hover {
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
 input[type="text"] {
     height: 15px;
     width: 70%;
@@ -222,13 +247,12 @@ button#open-sidebar-button {
     padding-top: 0px;
     border-radius: 10px;
     border: #eee solid;
-
+    margin-left: 20px;
     color: #333;
     background-color: #eee;
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
     font-size: xx-large;
     float: left;
-    position: fixed;
     top: 45px;
     left: 30px;
 }
@@ -285,6 +309,9 @@ footer {
         padding-left: 9%;
         padding-right: 11%;
     }
+    input[type="text"] {
+        width: 60%;
+    }
 }
 @media (max-width: 500px) {
     div#content {
@@ -294,17 +321,24 @@ footer {
     input[type="text"] {
         margin-top: 20px;
         padding: 3px;
-        width: 70%;
+        width: 50%;
         font-size: 16px;
         border-radius: 30px;
         border: 10px solid #fff;
     }
     button#open-sidebar-button {
+        margin-top: 20px;
         top: 65px;
         left: 20px;
         height: 40px;
         width: 40px;
         font-size: x-large;
+        margin-left:10px;
+    }
+    .header-link {
+        margin-top: 20px;
+        height: 40px;
+        padding: 5px 10px;
     }
 }
 @media (max-width: 1300px) and (min-width: 980px) {
